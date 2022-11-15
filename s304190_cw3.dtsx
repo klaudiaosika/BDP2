@@ -1,0 +1,2213 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/24/2022 9:10:00 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-4BCTGM7"
+  DTS:CreatorName="DESKTOP-4BCTGM7\klaud"
+  DTS:DTSID="{CA2750A1-535E-49CF-BD7F-44C8EE454B23}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.845.0"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:ProtectionLevel="0"
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{A9169975-764B-453B-9BAA-C01D20EADD8A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorks2019]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{878BCB44-CF32-4C3D-8BD5-89769C5B88E0}"
+      DTS:ObjectName="DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorks2019">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-4BCTGM7\MSSQLSERVER_BDP;Initial Catalog=AdventureWorks2019;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{878BCB44-CF32-4C3D-8BD5-89769C5B88E0}DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorks2019;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorksDW2019]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A7BAD1FB-939C-478F-A24F-0D36928152DE}"
+      DTS:ObjectName="DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorksDW2019">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-4BCTGM7\MSSQLSERVER_BDP;Initial Catalog=AdventureWorksDW2019;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Package-{A7BAD1FB-939C-478F-A24F-0D36928152DE}DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorksDW2019;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{F4064A73-66AA-4A6F-9709-B37160B40DDB}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\klaud\Desktop\semestr2\BDP2\304190_CURRENCYRATE.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyKey"
+              DTS:DTSID="{22928B15-CC87-4062-85DB-6CF50874A6DC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{450F5111-9FD6-4AB9-93D3-E34092DF0B45}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{B7F52729-30DE-49BA-A4FA-27A2A09FE9D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{94EEB8ED-700B-45EC-897D-A55267E48D63}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{C13D5FA9-105B-462B-88CC-FA69889CB4CE}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C81012AF-9AB7-4CB7-BFA4-6B0744E132F7}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\klaud\Desktop\semestr2\BDP2\304190_CURRENCYRATE.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyKey"
+              DTS:DTSID="{84EA852A-C729-4639-A461-C5BE5F9C9379}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{A849E4DC-2966-423A-B7D3-42467060D306}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{7B9B9D45-BC01-4213-A3D0-D0078184735C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{B4558CB9-ED6A-44B8-909E-926AF8208D44}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{84EBEB0D-9D92-41D3-A1DA-5E9AF14DE2E4}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 2]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{67FDE770-3378-4784-B096-955C86FFAAE3}"
+      DTS:ObjectName="Flat File Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x0009_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\klaud\Desktop\semestr2\BDP2\s304190_cw3.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OLE DB Source.CurrencyKey"
+              DTS:DTSID="{BAB49DCC-FAF3-4533-9E75-736B7EC74D67}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{E87B49E4-2655-4AFF-BDFE-1FB34FA93021}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{19E8797C-C875-4AE1-8993-3CAC524E3732}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{390D6D2A-2CC6-405B-9787-C84EE576100F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{6BE025B8-F68D-4B70-AA84-01F256BBAFF8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyAlternateKey"
+              DTS:DTSID="{5BD3F613-555F-4C2F-8E82-0B5502FD2408}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lookup.CurrencyKey"
+              DTS:DTSID="{E4926D96-4AE1-4806-83C4-6E79D030E012}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 3]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9868EB6C-8480-423B-8F13-5F2ADCBC778A}"
+      DTS:ObjectName="Flat File Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\klaud\Desktop\semestr2\BDP2\s304190_cw3.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OLE DB Source.CurrencyKey"
+              DTS:DTSID="{ED90BA09-28FA-47C3-8C21-EFE903C1AD1B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{7D5CAD22-9DB6-49DF-8685-595F94AF5C53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{D8356057-290A-4E88-92A1-337180A2E9A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{F338B1BB-20A5-4FE4-B712-F1185503C4A1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{07BDCFEA-4D8A-42FD-B83C-0587D5BAE81D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyAlternateKey"
+              DTS:DTSID="{5C4FCFB4-0147-4633-8B72-FF5348446C51}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lookup.CurrencyKey"
+              DTS:DTSID="{491A39F3-A17B-4E7C-B785-E96849844D73}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 4]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6497BD61-611B-4116-9B33-CCE82F31589F}"
+      DTS:ObjectName="Flat File Connection Manager 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x0009_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\klaud\Desktop\semestr2\BDP2\s304190_cw3.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="OLE DB Source.CurrencyKey"
+              DTS:DTSID="{EDE7C4ED-9FD1-4F2C-A5D9-3FB170A22F8C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{D96B4B61-663C-4842-8765-2A00EA915DCC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{6FD98D99-31F5-4F2F-A201-0C9A2A100A07}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{0513C2D1-EFB8-429A-AE69-55DC7D262C36}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{97B5A63B-5F13-4E4D-9BD8-A3F9117612EB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyAlternateKey"
+              DTS:DTSID="{8462AF92-416B-45EA-AB1A-4EF670E803DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Lookup.CurrencyKey"
+              DTS:DTSID="{5C241262-5293-4A50-AF60-CACC09D9CA03}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 5]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{CFC09593-6C4A-461B-85C4-A22569F90EAD}"
+      DTS:ObjectName="Flat File Connection Manager 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\klaud\Desktop\semestr2\BDP2\s304190_cw3.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyKey"
+              DTS:DTSID="{F6B8EFA0-1EFE-448A-BE8E-4AEF21D1868A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{D22DDA2D-1F9A-403C-AA2F-4F8B5218F482}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{308077DF-E1EE-44C6-A3FA-0ABEF526F897}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{C3359271-19B6-43FA-8E10-E0E8F4CB1CD9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{E184E16B-B0CD-410A-8C36-D4CB262A9524}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="3"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyAlternateKey"
+              DTS:DTSID="{4B09078B-DE6C-4E87-BA70-F732CC0B6E88}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[PostgreSQL30]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{FDC1AADD-78AC-40E8-8B4A-A37A2B67E122}"
+      DTS:ObjectName="PostgreSQL30">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Dsn=PostgreSQL30;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[s304190]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{D10D67CD-CA6A-4BD2-97BF-936A6DE20F82}"
+      DTS:ObjectName="s304190">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="C:\Users\klaud\Desktop\semestr2\BDP2\304190_CURRENCYRATE.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyKey"
+              DTS:DTSID="{CFE8E4EB-9784-435F-99F6-05EAAA813752}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DateKey"
+              DTS:DTSID="{17E36959-E157-47C2-A5CD-42919619943E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AverageRate"
+              DTS:DTSID="{D8368803-F874-4BB9-A670-4EC0F8B940CF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EndOfDayRate"
+              DTS:DTSID="{4E15016A-CD94-4AB4-96C3-2F11581EB173}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D_"
+              DTS:DataType="135"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{4D11268F-DAA6-44EF-A929-F569C7782E56}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SQLServer]"
+      DTS:CreationName="ODBC"
+      DTS:DTSID="{9143F5CD-C8E5-4CF8-BB6C-833C3A1DC73B}"
+      DTS:ObjectName="SQLServer">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Dsn=SQLServer;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{81E9FF43-DC30-48A7-969E-B334D7C82975}"
+      DTS:ObjectName="YearsAgo">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">8</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\cw2"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
+      DTS:DTSID="{69022797-368F-4D92-B91F-7414A90531AF}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="cw2"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\cw2\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1045"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\cw2\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[CurrencyKey]"
+                      cachedDataType="i4"
+                      cachedName="CurrencyKey"
+                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyKey]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[CurrencyKey]" />
+                    <inputColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[AverageRate]"
+                      cachedDataType="r8"
+                      cachedName="AverageRate"
+                      cachedSortKeyPosition="-2"
+                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[AverageRate]" />
+                    <inputColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[EndOfDayRate]"
+                      cachedDataType="r8"
+                      cachedName="EndOfDayRate"
+                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[EndOfDayRate]" />
+                    <inputColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyKey]"
+                      dataType="i4"
+                      name="CurrencyKey" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
+                      dataType="r8"
+                      name="AverageRate" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
+                      dataType="r8"
+                      name="EndOfDayRate" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\cw2\Multicast"
+              componentClassID="Microsoft.Multicast"
+              contactInfo="Multicast;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Distributes every input row to every row in one or more outputs. For example, branch your data flow to make a copy of data so that some values can be masked before sharing with external partners."
+              name="Multicast">
+              <inputs>
+                <input
+                  refId="Package\cw2\Multicast.Inputs[Multicast Input 1]"
+                  name="Multicast Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\cw2\Multicast.Outputs[Multicast Output 1]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 1"
+                  synchronousInputId="Package\cw2\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\cw2\Multicast.Outputs[Multicast Output 2]"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 2"
+                  synchronousInputId="Package\cw2\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\cw2\Multicast.Outputs[Multicast Output 3]"
+                  dangling="true"
+                  deleteOutputOnPathDetached="true"
+                  name="Multicast Output 3"
+                  synchronousInputId="Package\cw2\Multicast.Inputs[Multicast Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\cw2\ODBC Destination"
+              componentClassID="Microsoft.SSISODBCDst"
+              contactInfo="ODBC Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Destination"
+              name="ODBC Destination"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"public"."currrate"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of rows inserted under the same transaction."
+                  expressionType="Notify"
+                  name="TransactionSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for inserting data. Possible values are 'Batch' or 'Row by row'."
+                  expressionType="Notify"
+                  name="InsertMethod">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\cw2\ODBC Destination.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[PostgreSQL30]"
+                  connectionManagerRefId="Package.ConnectionManagers[PostgreSQL30]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="ODBC Destination Input"
+                  truncationRowDisposition="FailComponent">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].Columns[CurrencyKey]"
+                      cachedDataType="i4"
+                      cachedName="CurrencyKey"
+                      externalMetadataColumnId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[ck]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[CurrencyKey]" />
+                    <inputColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[dk]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].Columns[AverageRate]"
+                      cachedDataType="r8"
+                      cachedName="AverageRate"
+                      cachedSortKeyPosition="-2"
+                      externalMetadataColumnId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[ar]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[AverageRate]" />
+                    <inputColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].Columns[EndOfDayRate]"
+                      cachedDataType="r8"
+                      cachedName="EndOfDayRate"
+                      externalMetadataColumnId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[er]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[EndOfDayRate]" />
+                    <inputColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      cachedSortKeyPosition="1"
+                      externalMetadataColumnId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[dt]"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[ck]"
+                      dataType="i4"
+                      name="ck" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[dk]"
+                      dataType="i4"
+                      name="dk" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[ar]"
+                      dataType="r8"
+                      name="ar" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[er]"
+                      dataType="r8"
+                      name="er" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input].ExternalColumns[dt]"
+                      dataType="dbTimeStamp2"
+                      name="dt"
+                      scale="6" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\cw2\ODBC Destination.Outputs[ODBC Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="ODBC Destination Error Output"
+                  synchronousInputId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cw2\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\cw2\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\cw2\ODBC Destination.Outputs[ODBC Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\cw2\ODBC Source"
+              componentClassID="Microsoft.SSISODBCSrc"
+              contactInfo="ODBC Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="ODBC Source"
+              name="ODBC Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="The name of the table to be fetched."
+                  expressionType="Notify"
+                  name="TableName">"dbo"."FactCurrencyRate"</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specify the number of rows fetched per batch."
+                  expressionType="Notify"
+                  name="BatchSize">1000</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines the chunk size allocation for LOB columns"
+                  expressionType="Notify"
+                  name="LobChunkSize">32768</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines how the component exposes CHAR columns. If False, CHAR columns are exposed as (multi-)byte strings (DT_STR), if True, CHAR columns are exposed as wide strings (DT_WSTR)"
+                  expressionType="Notify"
+                  name="ExposeCharColumnsAsUnicode">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds to wait for an SQL statement to execute before returning to the application."
+                  expressionType="Notify"
+                  name="StatementTimeout">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The code page to use when code page information is unavailable from the data source."
+                  expressionType="Notify"
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Int32"
+                  description="The method used for fetching data."
+                  expressionType="Notify"
+                  name="FetchMethod">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="The ODBC C data type for binding numeric data."
+                  expressionType="Notify"
+                  name="BindNumericAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Determines how the component would bind columns of (multi)-byte string types (i.e., SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR). The options are: Unicode (SQL_C_WCHAR) and ANSI (SQL_C_CHAR)."
+                  expressionType="Notify"
+                  name="BindCharColumnsAs">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="The mode used to access the database."
+                  expressionType="Notify"
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\cw2\ODBC Source.Connections[ODBCConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SQLServer]"
+                  connectionManagerRefId="Package.ConnectionManagers[SQLServer]"
+                  description="The ODBC runtime connection used to access the database."
+                  name="ODBCConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output]"
+                  errorRowDisposition="FailComponent"
+                  name="ODBC Source Output"
+                  truncationRowDisposition="FailComponent">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[CurrencyKey]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CurrencyKey]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[CurrencyKey]"
+                      name="CurrencyKey" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[DateKey]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[DateKey]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[DateKey]"
+                      name="DateKey" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[AverageRate]"
+                      dataType="r8"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AverageRate]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[AverageRate]"
+                      name="AverageRate" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[EndOfDayRate]"
+                      dataType="r8"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[EndOfDayRate]"
+                      name="EndOfDayRate" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Date]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[Date]"
+                      name="Date" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CurrencyKey]"
+                      dataType="i4"
+                      name="CurrencyKey" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AverageRate]"
+                      dataType="r8"
+                      name="AverageRate" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[EndOfDayRate]"
+                      dataType="r8"
+                      name="EndOfDayRate" />
+                    <externalMetadataColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output]"
+                  isErrorOut="true"
+                  name="ODBC Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[CurrencyKey]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[CurrencyKey]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[CurrencyKey]"
+                      name="CurrencyKey" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[DateKey]"
+                      dataType="i4"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[DateKey]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[DateKey]"
+                      name="DateKey" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[AverageRate]"
+                      dataType="r8"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[AverageRate]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[AverageRate]"
+                      name="AverageRate" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[EndOfDayRate]"
+                      dataType="r8"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[EndOfDayRate]"
+                      name="EndOfDayRate" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      externalMetadataColumnId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].ExternalColumns[Date]"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\cw2\Sort"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Sort"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\cw2\Sort.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\cw2\Sort.Inputs[Sort Input].Columns[CurrencyKey]"
+                      cachedDataType="i4"
+                      cachedName="CurrencyKey"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[CurrencyKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\cw2\Sort.Inputs[Sort Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[DateKey]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\cw2\Sort.Inputs[Sort Input].Columns[AverageRate]"
+                      cachedDataType="r8"
+                      cachedName="AverageRate"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[AverageRate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">-2</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\cw2\Sort.Inputs[Sort Input].Columns[EndOfDayRate]"
+                      cachedDataType="r8"
+                      cachedName="EndOfDayRate"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[EndOfDayRate]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\cw2\Sort.Inputs[Sort Input].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      lineageId="Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\cw2\Sort.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cw2\Sort.Outputs[Sort Output].Columns[CurrencyKey]"
+                      dataType="i4"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[CurrencyKey]"
+                      name="CurrencyKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[CurrencyKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cw2\Sort.Outputs[Sort Output].Columns[DateKey]"
+                      dataType="i4"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[DateKey]"
+                      name="DateKey">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[DateKey]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cw2\Sort.Outputs[Sort Output].Columns[AverageRate]"
+                      dataType="r8"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[AverageRate]"
+                      name="AverageRate"
+                      sortKeyPosition="-2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[AverageRate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cw2\Sort.Outputs[Sort Output].Columns[EndOfDayRate]"
+                      dataType="r8"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[EndOfDayRate]"
+                      name="EndOfDayRate">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[EndOfDayRate]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\cw2\Sort.Outputs[Sort Output].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\cw2\Sort.Outputs[Sort Output].Columns[Date]"
+                      name="Date"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\cw2\ODBC Source.Outputs[ODBC Source Output].Columns[Date]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\cw2.Paths[Multicast Output 1]"
+              endId="Package\cw2\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Multicast Output 1"
+              startId="Package\cw2\Multicast.Outputs[Multicast Output 1]" />
+            <path
+              refId="Package\cw2.Paths[Multicast Output 2]"
+              endId="Package\cw2\ODBC Destination.Inputs[ODBC Destination Input]"
+              name="Multicast Output 2"
+              startId="Package\cw2\Multicast.Outputs[Multicast Output 2]" />
+            <path
+              refId="Package\cw2.Paths[ODBC Source Output]"
+              endId="Package\cw2\Sort.Inputs[Sort Input]"
+              name="ODBC Source Output"
+              startId="Package\cw2\ODBC Source.Outputs[ODBC Source Output]" />
+            <path
+              refId="Package\cw2.Paths[Sort Output]"
+              endId="Package\cw2\Multicast.Inputs[Multicast Input 1]"
+              name="Sort Output"
+              startId="Package\cw2\Sort.Outputs[Sort Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\cw3"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E8F466D3-D1D6-4CD5-B6DC-3AC72769EC6B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="cw3"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\cw3\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\cw3\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\cw3\Conditional Split.Inputs[Conditional Split Input].Columns[CurrencyAlternateKey]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CurrencyAlternateKey"
+                      lineageId="Package\cw3\Lookup.Outputs[Lookup Match Output].Columns[CurrencyAlternateKey]" />
+                    <inputColumn
+                      refId="Package\cw3\Conditional Split.Inputs[Conditional Split Input].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\cw3\Conditional Split.Outputs[EUR or GBP]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="EUR or GBP"
+                  synchronousInputId="Package\cw3\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\cw3\Lookup.Outputs[Lookup Match Output].Columns[CurrencyAlternateKey]} != "GBP" &amp;&amp; #{Package\cw3\Lookup.Outputs[Lookup Match Output].Columns[CurrencyAlternateKey]} != "EUR"</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">CurrencyAlternateKey != "GBP" &amp;&amp; CurrencyAlternateKey != "EUR"</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\cw3\Conditional Split.Outputs[8 years ago]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="8 years ago"
+                  synchronousInputId="Package\cw3\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[DATEPART]("year",#{Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]}) != [DATEPART]("year",[GETDATE]()) - @[$Package::YearsAgo] &amp;&amp; [DATEPART]("month",[GETDATE]()) != [DATEPART]("month",#{Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]}) &amp;&amp; [DATEPART]("day",[GETDATE]()) != [DATEPART]("day",#{Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]})</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">DATEPART("year",Date) != DATEPART("year",GETDATE()) - @[$Package::YearsAgo] &amp;&amp; DATEPART("month",GETDATE()) != DATEPART("month",Date) &amp;&amp; DATEPART("day",GETDATE()) != DATEPART("day",Date)</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\cw3\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\cw3\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\cw3\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\cw3\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cw3\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\cw3\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\cw3\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\cw3\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\cw3\Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1045"
+              name="Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\cw3\Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 5]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 5]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].Columns[EndOfDayRate]"
+                      cachedDataType="r8"
+                      cachedName="EndOfDayRate"
+                      externalMetadataColumnId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndOfDayRate]" />
+                    <inputColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].Columns[CurrencyAlternateKey]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="CurrencyAlternateKey"
+                      externalMetadataColumnId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyAlternateKey]"
+                      lineageId="Package\cw3\Lookup.Outputs[Lookup Match Output].Columns[CurrencyAlternateKey]" />
+                    <inputColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].Columns[AverageRate]"
+                      cachedDataType="r8"
+                      cachedName="AverageRate"
+                      externalMetadataColumnId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[AverageRate]" />
+                    <inputColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
+                      dataType="r8"
+                      name="EndOfDayRate" />
+                    <externalMetadataColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyAlternateKey]"
+                      dataType="wstr"
+                      length="3"
+                      name="CurrencyAlternateKey" />
+                    <externalMetadataColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[AverageRate]"
+                      dataType="r8"
+                      name="AverageRate" />
+                    <externalMetadataColumn
+                      refId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[CurrencyKey]"
+                      dataType="i4"
+                      name="CurrencyKey" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\cw3\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DimCurrency]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from (select * from [dbo].[DimCurrency]) [refTable]
+where [refTable].[CurrencyKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CurrencyKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrencyAlternateKey" dataType="DT_WSTR" length="3" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CurrencyName" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyKey]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\cw3\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorksDW2019]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorksDW2019]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\cw3\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\cw3\Lookup.Inputs[Lookup Input].Columns[CurrencyKey]"
+                      cachedDataType="i4"
+                      cachedName="CurrencyKey"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyKey]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CurrencyKey</property>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CurrencyKey</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\cw3\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\cw3\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cw3\Lookup.Outputs[Lookup Match Output].Columns[CurrencyAlternateKey]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Copy Column"
+                      length="3"
+                      lineageId="Package\cw3\Lookup.Outputs[Lookup Match Output].Columns[CurrencyAlternateKey]"
+                      name="CurrencyAlternateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CurrencyAlternateKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\cw3\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\cw3\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\cw3\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\cw3\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cw3\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\cw3\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\cw3\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\cw3\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\cw3\OLE DB Source"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="OLE DB Source"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[FactCurrencyRate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\cw3\OLE DB Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorksDW2019]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-4BCTGM7\MSSQLSERVER_BDP.AdventureWorksDW2019]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyKey]"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[CurrencyKey]"
+                      name="CurrencyKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateKey]"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[AverageRate]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AverageRate]"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[AverageRate]"
+                      name="AverageRate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndOfDayRate]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EndOfDayRate]"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[EndOfDayRate]"
+                      name="EndOfDayRate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[CurrencyKey]"
+                      dataType="i4"
+                      name="CurrencyKey" />
+                    <externalMetadataColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[AverageRate]"
+                      dataType="r8"
+                      name="AverageRate" />
+                    <externalMetadataColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EndOfDayRate]"
+                      dataType="r8"
+                      name="EndOfDayRate" />
+                    <externalMetadataColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Date]"
+                      dataType="dbTimeStamp"
+                      name="Date" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyKey]"
+                      dataType="i4"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[CurrencyKey]"
+                      name="CurrencyKey" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateKey]"
+                      dataType="i4"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DateKey]"
+                      name="DateKey" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AverageRate]"
+                      dataType="r8"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[AverageRate]"
+                      name="AverageRate" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EndOfDayRate]"
+                      dataType="r8"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EndOfDayRate]"
+                      name="EndOfDayRate" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\cw3.Paths[Conditional Split Default Output]"
+              endId="Package\cw3\Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Conditional Split Default Output"
+              startId="Package\cw3\Conditional Split.Outputs[Conditional Split Default Output]" />
+            <path
+              refId="Package\cw3.Paths[Lookup Match Output]"
+              endId="Package\cw3\Conditional Split.Inputs[Conditional Split Input]"
+              name="Lookup Match Output"
+              startId="Package\cw3\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\cw3.Paths[OLE DB Source Output]"
+              endId="Package\cw3\Lookup.Inputs[Lookup Input]"
+              name="OLE DB Source Output"
+              startId="Package\cw3\OLE DB Source.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="96.8,41.6"
+          Id="Package\cw2"
+          TopLeft="5.5,21.1000001239777" />
+        <NodeLayout
+          Size="96.8,41.6"
+          Id="Package\cw3"
+          TopLeft="157.999993940195,27.1666668388578" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\cw2">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="144,41.6"
+          Id="Package\cw2\ODBC Source"
+          TopLeft="335.49999165535,36.2333326239056" />
+        <NodeLayout
+          Size="97.6,41.6"
+          Id="Package\cw2\Sort"
+          TopLeft="349.66666014327,119.633332809872" />
+        <NodeLayout
+          Size="163.2,41.6"
+          Id="Package\cw2\ODBC Destination"
+          TopLeft="483.833314326075,294.433335413403" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\cw2\Flat File Destination"
+          TopLeft="202.99999811252,295.900001115799" />
+        <NodeLayout
+          Size="119.2,41.6"
+          Id="Package\cw2\Multicast"
+          TopLeft="343.833328233825,198.166666528914" />
+        <EdgeLayout
+          Id="Package\cw2.Paths[Multicast Output 2]"
+          TopLeft="421.966661567159,239.766666528914">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="143.466652758917,54.6666688844893"
+              Start="0,0"
+              End="143.466652758917,47.1666688844893">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.3011046575135" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.3011046575135"
+                    Point2="0,22.3011046575135"
+                    Point3="4,22.3011046575135" />
+                  <mssgle:LineSegment
+                    End="139.466652758917,22.3011046575135" />
+                  <mssgle:CubicBezierSegment
+                    Point1="139.466652758917,22.3011046575135"
+                    Point2="143.466652758917,22.3011046575135"
+                    Point3="143.466652758917,26.3011046575135" />
+                  <mssgle:LineSegment
+                    End="143.466652758917,47.1666688844893" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\cw2.Paths[Multicast Output 1]"
+          TopLeft="403.433328233825,239.766666528914">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-115.233330121305,56.1333345868853"
+              Start="0,0"
+              End="-115.233330121305,48.6333345868853">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0666672934426" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.0666672934426"
+                    Point2="0,28.0666672934426"
+                    Point3="-4,28.0666672934426" />
+                  <mssgle:LineSegment
+                    End="-111.233330121305,28.0666672934426" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-111.233330121305,28.0666672934426"
+                    Point2="-115.233330121305,28.0666672934426"
+                    Point3="-115.233330121305,32.0666672934426" />
+                  <mssgle:LineSegment
+                    End="-115.233330121305,48.6333345868853" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\cw2.Paths[Sort Output]"
+          TopLeft="400.949994188548,161.233332809872">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36.9333337190416"
+              Start="0,0"
+              End="0,29.4333337190416">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.4333337190416" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\cw2.Paths[ODBC Source Output]"
+          TopLeft="407.49999165535,77.8333326239056">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-9.03333151208057,41.8000001859665"
+              Start="0,0"
+              End="-9.03333151208057,34.3000001859665">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.9000000929832" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.9000000929832"
+                    Point2="0,20.9000000929832"
+                    Point3="-4,20.9000000929832" />
+                  <mssgle:LineSegment
+                    End="-5.03333151208057,20.9000000929832" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5.03333151208057,20.9000000929832"
+                    Point2="-9.03333151208057,20.9000000929832"
+                    Point3="-9.03333151208057,24.9000000929832" />
+                  <mssgle:LineSegment
+                    End="-9.03333151208057,34.3000001859665" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\cw2\ODBC Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\cw2\ODBC Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\cw3">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\cw3\OLE DB Source"
+          TopLeft="204.666659944588,19.8999998760223" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\cw3\Flat File Destination"
+          TopLeft="121.333331114716,221.500001239777" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\cw3\Lookup"
+          TopLeft="223.833328233825,104.166666735543" />
+        <EdgeLayout
+          Id="Package\cw3.Paths[OLE DB Source Output]"
+          TopLeft="280.449994089206,61.4999998760223">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.6666668595208"
+              Start="0,0"
+              End="0,35.1666668595208">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.1666668595208" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\cw3\Conditional Split"
+          TopLeft="423.833321478632,183.566667128139" />
+        <EdgeLayout
+          Id="Package\cw3.Paths[Lookup Match Output]"
+          TopLeft="280.233328233825,145.766666735543">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="220.399993244807,37.8000003925959"
+              Start="0,0"
+              End="220.399993244807,30.3000003925959">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.900000196298" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.900000196298"
+                    Point2="0,18.900000196298"
+                    Point3="4,18.900000196298" />
+                  <mssgle:LineSegment
+                    End="216.399993244807,18.900000196298" />
+                  <mssgle:CubicBezierSegment
+                    Point1="216.399993244807,18.900000196298"
+                    Point2="220.399993244807,18.900000196298"
+                    Point3="220.399993244807,22.900000196298" />
+                  <mssgle:LineSegment
+                    End="220.399993244807,30.3000003925959" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="62.0086099036536,23.900000196298,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\cw3.Paths[Conditional Split Default Output]"
+          TopLeft="423.833321478632,204.366667128139">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-132.099990363916,37.9333341116375"
+              Start="0,0"
+              End="-124.599990363916,37.9333341116375">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-62.0499951819581,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-62.0499951819581,0"
+                    Point2="-66.0499951819581,0"
+                    Point3="-66.0499951819581,4" />
+                  <mssgle:LineSegment
+                    End="-66.0499951819581,33.9333341116375" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-66.0499951819581,33.9333341116375"
+                    Point2="-66.0499951819581,37.9333341116375"
+                    Point3="-70.0499951819581,37.9333341116375" />
+                  <mssgle:LineSegment
+                    End="-124.599990363916,37.9333341116375" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\cw3\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\cw3\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimCurrency]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
